@@ -48,7 +48,12 @@ def recursiveSearch(pathSrc: str, recursion: bool):
 
 def addMetadata(pathDest:str , listMelodies:list , folders: list, recursive:bool ):
     try:
-        with alive_bar(len(listMelodies),bar = 'bubbles', spinner = 'notes2') as bar:
+        if recursive:
+            numAllMelidies = sum([len(l) for l in listMelodies])
+        else: 
+            numAllMelidies = len(listMelodies)
+
+        with alive_bar(numAllMelidies,bar = 'bubbles', spinner = 'notes2') as bar:
             for folder in folders:
                 if recursive:
                     namesMel = listMelodies[ folders.index(folder) ]
