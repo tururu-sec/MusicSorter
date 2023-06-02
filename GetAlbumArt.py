@@ -1,8 +1,6 @@
 def get_artwork(title, artist):
     import random
     import requests
-    #import io
-    #import PIL.Image as Image
     from bs4 import BeautifulSoup
 
     title = title.replace('_', '')
@@ -30,14 +28,7 @@ def get_artwork(title, artist):
 
     if links:
         response = requests.get(links[0], headers=headers)
-        #image = Image.open(io.BytesIO(response.content))
         image = response.content
         return image
 
-
-
-
-if __name__=='__main__':
-    print(get_artwork('Океанами стали', 'ALEKSEEV'))
-#
     
