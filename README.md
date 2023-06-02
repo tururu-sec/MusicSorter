@@ -3,7 +3,7 @@ I`m edit metadata music. I add there title, artist and image (search in internet
 
 
 ## How to use
-I am accepting files like `<Artist> - <Title>.mp4`
+I am accepting files like `<Artist> - <Title>.mp3`
 
 Run before the first run of the script. This is the installation of modules in python3:
   ```
